@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: hsl(233, 47%, 7%);
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: auto;
+    background-color: hsl(244, 38%, 16%);
+    max-width: 100%;
+    width: 50rem;
+    border-radius: 0.4rem;
+}
+
+
+.business-card__image{
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 3/-1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;  
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
+    filter: sepia(10%) hue-rotate(960deg) brightness(60%) saturate(2000%) opacity(70%) ;
+}
+
+
+
+.business-card__image--mobile{
+    display: none;
+}
+
+
+
+.business-card__details{
+    grid-column: 1/ 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:hsl(0, 0%, 100%);
+    padding: 1rem 3.1rem 0rem 2.5rem;
+    gap: 1.5rem;
+}
+
+.business-card__details__header{
+    font-family: "Inter", sans-serif;  
+    width: 100%;
+    align-self: center;
+    font-size: 1.8rem;
+}
+    
+
+.business-card__details__header--colored-text{
+    color:hsl(277, 64%, 61%);
+}
+
+.business-card__details__paragraph{
+    font-family:  "Lexend Deca", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color:  hsla(0, 0%, 100%, 0.75);
+    text-align:left;
+}
+
+.business-card__information{
+    grid-column: -3 /2;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0rem 0rem 2.5rem;
+    margin-top: -3rem;
+    gap: 2.5rem;
+    color: hsl(0, 0%, 100%);
+    font-family: "Inter", sans-serif;  
+    
+}
+
+.business-card__information__number{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    font-weight:  700;
+    text-align: left;
+    text-transform: uppercase;
+    gap: 0.3rem;
+    font-size: 15px;
+
+}
+
+.business-card__information__title{
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 1.3px;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media (max-width:375px),(max-width:600px)  {
+    
+
+
+    body{
+        background-color: hsl(233, 47%, 7%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+   
+    .business-card{
+        display: flex;
+        flex-direction: column;
+        background-color: hsl(244, 38%, 16%);
+        max-width: 90%;
+        height: 100%;
+        border-radius: 0.4rem;
+    }
+
+    .business-card__image{
+        display: none;
+    }
+
+    .business-card__image--mobile{
+        display: flex;
+        border-radius: 0.4rem 0.4rem 0rem 0rem;
+    filter: sepia(10%) hue-rotate(960deg) brightness(60%) saturate(2000%) opacity(70%) ;
+    }
+
+
+    .business-card__details{
+        display: flex;
+        padding:  0rem;
+        gap: 1rem;
+    }
+
+    .business-card__details__header{
+        text-align: center;
+        padding: 1rem 2.5rem 0rem 2.5rem;
+
+    }
+
+    .business-card__details__paragraph{
+      text-align: center;
+        word-spacing: 1px;
+        line-height: 1.3rem;
+        padding: 0rem 4rem 0rem 3rem;
+    }
+
+    .business-card__information{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;  
+    }
+
+
+    .business-card__information{
+        justify-content: center;
+        align-items: center;
+        margin: 0rem;
+        padding: 2rem 0rem 2rem 0rem;
+        gap:2rem;
+    }
+
+    .business-card__information__number{
+        text-align: center;
+        font-size: 1.2rem;
+        gap: 0.3rem
+    }
+
+    .business-card__information__title{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.6rem;
+        letter-spacing: 0.1rem;
+        color: hsla(0, 0%, 100%, 0.6);
+    }
+
+
+    
+}
